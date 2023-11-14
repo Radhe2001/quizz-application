@@ -1,8 +1,6 @@
-// import 'dart:io';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 import 'constants/urls.dart';
-// import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'loginpage.dart';
 
@@ -35,7 +33,6 @@ class _RegisterUserState extends State<RegisterUser> {
   void login() {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => LoginPage()));
-    // createToast();
   }
 
   void register() async {
@@ -69,7 +66,7 @@ class _RegisterUserState extends State<RegisterUser> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Registration Page"),
+        title: const Text("Registration Page"),
         backgroundColor: Colors.red[200],
       ),
       body: Container(
@@ -81,81 +78,81 @@ class _RegisterUserState extends State<RegisterUser> {
             decoration: BoxDecoration(
               color: Colors.grey[350],
               border: Border.all(width: 5, color: Colors.black),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
             alignment: Alignment.center,
             child: Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
                   TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your name",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black)),
                     controller: name,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your Registration",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black)),
                     controller: registration,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your email",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black)),
                     controller: email,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your password",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black)),
                     controller: password,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
                     children: [
                       ElevatedButton(
                         onPressed: login,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue),
+                        child: const Text(
                           "Login",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 22),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       ElevatedButton(
                         onPressed: register,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue),
+                        child: const Text(
                           "Register",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 22),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue),
                       ),
                     ],
                   ),

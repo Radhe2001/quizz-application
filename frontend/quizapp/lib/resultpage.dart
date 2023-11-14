@@ -35,7 +35,7 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Result"),
+        title: const Text("Result"),
         backgroundColor: Colors.red[200],
       ),
       body: Container(
@@ -47,7 +47,7 @@ class _ResultPageState extends State<ResultPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
                   color: Colors.teal[300],
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: PieChart(
@@ -57,15 +57,15 @@ class _ResultPageState extends State<ResultPage> {
                       },
                       chartType: ChartType.ring,
                       baseChartColor: Colors.red!,
-                      colorList: <Color>[Colors.blue, Colors.red],
-                      chartValuesOptions: ChartValuesOptions(
+                      colorList: const <Color>[Colors.blue, Colors.red],
+                      chartValuesOptions: const ChartValuesOptions(
                         showChartValuesInPercentage: true,
                       ),
                     ),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
@@ -73,29 +73,29 @@ class _ResultPageState extends State<ResultPage> {
                   children: [
                     Text(
                       "Total correct answers : ${correctAnswer}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
                       "Total incorrect answers : ${wrongAnswer}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
                       "Total marks obtained answers : ${marks}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
@@ -104,7 +104,7 @@ class _ResultPageState extends State<ResultPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
               GestureDetector(
@@ -124,13 +124,13 @@ class _ResultPageState extends State<ResultPage> {
                       width: 3,
                       color: Colors.black,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Text(
                         "Go to home page",
                         style: TextStyle(

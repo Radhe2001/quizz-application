@@ -89,11 +89,11 @@ class _QuestionPageState extends State<QuestionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Quiz Screen"),
+        title: const Text("Quiz Screen"),
         backgroundColor: Colors.red[200],
       ),
       body: isLoading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : PageView.builder(
               controller: controller,
               itemCount: questionList.length,
@@ -106,7 +106,7 @@ class _QuestionPageState extends State<QuestionPage> {
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
                           "Question : ${index + 1} - ${questionList.length}",
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                             color: Colors.blue,
@@ -123,7 +123,7 @@ class _QuestionPageState extends State<QuestionPage> {
                             width: 3,
                             color: Colors.black,
                           ),
-                          borderRadius: BorderRadius.all(
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(10),
                           ),
                         ),
@@ -132,7 +132,7 @@ class _QuestionPageState extends State<QuestionPage> {
                           child: Center(
                             child: Text(
                               questionList[index].question,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -142,7 +142,7 @@ class _QuestionPageState extends State<QuestionPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(
@@ -165,7 +165,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               width: 3,
                               color: Colors.black,
                             ),
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(10),
                             ),
                           ),
@@ -173,7 +173,7 @@ class _QuestionPageState extends State<QuestionPage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
                               " A.) ${questionList[index].option1}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -203,7 +203,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               width: 3,
                               color: Colors.black,
                             ),
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(10),
                             ),
                           ),
@@ -211,7 +211,7 @@ class _QuestionPageState extends State<QuestionPage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
                               " B.) ${questionList[index].option2}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -241,7 +241,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               width: 3,
                               color: Colors.black,
                             ),
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(10),
                             ),
                           ),
@@ -249,7 +249,7 @@ class _QuestionPageState extends State<QuestionPage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
                               " C.) ${questionList[index].option3}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -279,7 +279,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               width: 3,
                               color: Colors.black,
                             ),
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(10),
                             ),
                           ),
@@ -287,7 +287,7 @@ class _QuestionPageState extends State<QuestionPage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
                               " D.) ${questionList[index].option4}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -297,7 +297,7 @@ class _QuestionPageState extends State<QuestionPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     GestureDetector(
@@ -356,7 +356,7 @@ class _QuestionPageState extends State<QuestionPage> {
                                   width: 3,
                                   color: Colors.black,
                                 ),
-                                borderRadius: BorderRadius.all(
+                                borderRadius: const BorderRadius.all(
                                   Radius.circular(10),
                                 ),
                               ),
@@ -365,7 +365,7 @@ class _QuestionPageState extends State<QuestionPage> {
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text(
                                     buttonText,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,

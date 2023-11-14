@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-// import 'models/subjectmodel.dart';
 import 'constants/urls.dart';
 import 'homepage.dart';
 import 'registerpage.dart';
@@ -69,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
         backgroundColor: Colors.red[200],
       ),
       body: Container(
@@ -81,59 +80,59 @@ class _LoginPageState extends State<LoginPage> {
             decoration: BoxDecoration(
               color: Colors.grey[350],
               border: Border.all(width: 5, color: Colors.black),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
             alignment: Alignment.center,
             child: Padding(
-              padding: EdgeInsets.fromLTRB(15, 50, 15, 50),
+              padding: const EdgeInsets.fromLTRB(15, 50, 15, 50),
               child: Column(
                 children: [
                   TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your Registration No.",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black)),
                     controller: registration,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your password",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black)),
                     controller: password,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   Row(
                     children: [
                       ElevatedButton(
                         onPressed: register,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue),
+                        child: const Text(
                           "Register",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 22),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue),
                       ),
-                      SizedBox(width: 20,),
+                      const SizedBox(width: 20,),
                       ElevatedButton(
                         onPressed: fetchData,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue),
+                        child: const Text(
                           "Login",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 22),
                         ),
-                        style:
-                            ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                       ),
                     ],
                   ),

@@ -49,11 +49,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Qizz App"),
+        title: const Text("Qizz App"),
         backgroundColor: Colors.red[200],
       ),
       body: isLoading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : ListView(
               children: subjectList.map((e) {
                 return Padding(
@@ -71,12 +71,12 @@ class _HomePageState extends State<HomePage> {
                           width: 3,
                           color: Colors.black,
                         ),
-                        borderRadius: BorderRadius.all(Radius.circular(7)),
+                        borderRadius: const BorderRadius.all(Radius.circular(7)),
                       ),
                       child: Center(
                         child: Text(
                           e.subjectName,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
